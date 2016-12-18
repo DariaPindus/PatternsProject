@@ -1,6 +1,6 @@
 package com.daria.university.kursovaya.commands;
 
-public class DesignCommand implements Command{
+public class ExecutionCommand implements Command{
     public void execute() {
 
     }

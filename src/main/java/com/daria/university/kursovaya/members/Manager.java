@@ -9,6 +9,11 @@ public class Manager extends TeamTaskTemplate{
 
     private Map<String, String> requirements;
     private String report;
+    private String name;
+
+    public Manager(String name) {
+        this.name = name;
+    }
 
     protected void showResults() {
         System.out.println("Manager showing results in report:");

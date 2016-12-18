@@ -7,7 +7,7 @@ public abstract class TeamTaskTemplate {
     private int duration;
     private List<String> requirements;
 
-    public void doTask(int duration, List<String> requirements) {
+    public void doMainTask() {
         setDuration(duration);
         setRequirements(requirements);
         executeCurrentTask();

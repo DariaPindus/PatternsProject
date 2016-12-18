@@ -3,26 +3,21 @@ package com.daria.university.kursovaya.members;
 import com.daria.university.kursovaya.components.Template;
 import com.daria.university.kursovaya.template.TeamTaskTemplate;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Designer extends TeamTaskTemplate {
 
-    private ArrayList<String> stuffNames;
+    private List<String> teamNames;
     private Template template;
 
-    public Designer(){
-        template = new Template();
-    }
-
-    public Designer(ArrayList<String> stuff){
-        stuffNames = stuff;
+    public Designer(List<String> team){
+        teamNames = team;
         template = new Template();
     }
 
     @Override
-    public void doTask(int duration, List<String> requirements) {
-        super.doTask(duration, requirements);
+    public void doMainTask() {
+
     }
 
     protected void showResults() {

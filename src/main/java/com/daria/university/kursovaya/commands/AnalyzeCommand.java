@@ -21,7 +21,6 @@ public class AnalyzeCommand implements Command{
     }
 
     public void undo() {
-
     }
 
     public void setRequirements(Map<String, String> requirements){
