@@ -5,7 +5,7 @@ import com.daria.university.kursovaya.template.TeamTaskTemplate;
 
 import java.util.List;
 
-public class Designer extends TeamTaskTemplate {
+public abstract class Designer extends TeamTaskTemplate {
 
     private List<String> teamNames;
     private Template template;

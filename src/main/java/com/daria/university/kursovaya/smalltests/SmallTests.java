@@ -3,6 +3,8 @@ package com.daria.university.kursovaya.smalltests;
 
 import com.daria.university.kursovaya.members.Designer;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class SmallTests {
     public static void main(String[] args) {
 /*        Child1 child1 = new Child1();
@@ -14,5 +16,6 @@ public class SmallTests {
         child2.print();
         child1.print();*/
         System.out.println(Designer.class.getSimpleName()); //returns only Designer
+
     }
 }

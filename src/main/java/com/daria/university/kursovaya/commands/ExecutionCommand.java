@@ -3,6 +3,8 @@ package com.daria.university.kursovaya.commands;
 import com.daria.university.kursovaya.members.Designer;
 import com.daria.university.kursovaya.members.Programmers;
 
+import java.util.Random;
+
 public class ExecutionCommand implements Command{
     Designer designer;
     Programmers programmers;
@@ -13,8 +15,8 @@ public class ExecutionCommand implements Command{
     }
 
     public void execute() {
-        designer.executeCurrentTask();
-        programmers.executeCurrentTask();
+        designer.doMainTask(new Random().nextInt(4) + 1);
+        programmers.doMainTask(new Random().nextInt(4)+2);
     }
 
     public void undo() {

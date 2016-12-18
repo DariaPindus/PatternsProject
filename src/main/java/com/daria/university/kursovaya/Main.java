@@ -13,12 +13,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         //TODO add list of stuff
-        ArrayList<String> designersStuff = new ArrayList<String>();
+        ArrayList<Designer> designersStuff = new ArrayList<Designer>();
         ArrayList<String> programmersStuff = new ArrayList<String>();
 
         String managerN = "Rodolfo Allison";
 
-        designersStuff.add("John Robin");
+        designersStuff.add();
         designersStuff.add("Priscilla King");
         programmersStuff.add("Emma Floyd");
         programmersStuff.add("Donald Myers");
@@ -28,6 +28,7 @@ public class Main {
         Programmers programmers = new Programmers(programmersStuff);
         Manager manager = new Manager(managerN);
 
+/*
         List<String> requirements = new ArrayList<String>();
         System.out.println("Please, enter your project requirements: ");
         Scanner scanner = new Scanner(System.in);
@@ -37,8 +38,11 @@ public class Main {
             requirements.add(str);
         }
         scanner.close();
+*/
 
-        AnalyzeCommand analyze = new AnalyzeCommand(designers, manager);
+
+
+        AnalyzeCommand analyze = new AnalyzeCommand(designers, manager, requirements);
 
     }
 }

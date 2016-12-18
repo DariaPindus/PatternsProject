@@ -3,11 +3,12 @@ package com.daria.university.kursovaya.members;
 
 import com.daria.university.kursovaya.template.TeamTaskTemplate;
 
+import java.util.List;
 import java.util.Map;
 
 public class Manager extends TeamTaskTemplate{
 
-    private Map<String, String> requirements;
+    private List<String> requirements;
     private String report;
     private String name;
 
@@ -21,14 +22,14 @@ public class Manager extends TeamTaskTemplate{
     }
 
     public void executeCurrentTask() {
-
+        System.out.println("Manager preparing requirements and doing its main job");
     }
 
-    public Map<String, String> getRequirements() {
-        return requirements;
-    }
+//    public Map<String, String> getRequirements() {
+//        return requirements;
+//    }
 
-    public void setProjectRequirements(Map<String, String> requirements) {
+    public void setProjectRequirements(List<String> requirements) {
         this.requirements = requirements;
     }
 
