@@ -34,6 +34,6 @@ public class Designer extends TeamTaskTemplate {
     }
 
     public void discussConcept(){
-        System.out.println("Designers dicuss concept of site");
+        System.out.println("Designers discuss site concept");
     }
 }
