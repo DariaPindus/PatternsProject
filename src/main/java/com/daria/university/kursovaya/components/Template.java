@@ -2,6 +2,7 @@ package com.daria.university.kursovaya.components;
 
 
 public class Template {
+    private String psdTemplate;
     private String html;
     private String css;
     private String js;
@@ -28,5 +29,9 @@ public class Template {
 
     public void setJs(String js) {
         this.js = js;
+    }
+
+    public void setPsdTemplate(String psdTemplate) {
+        this.psdTemplate = psdTemplate;
     }
 }
