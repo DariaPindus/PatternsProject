@@ -7,6 +7,11 @@ public class AnalyzeCommand implements Command{
     Designer designer;
     Manager manager;
 
+    public AnalyzeCommand(Designer designer, Manager manager) {
+        this.designer = designer;
+        this.manager = manager;
+    }
+
     public void execute() {
         designer.discussConcept();
         //manager.
