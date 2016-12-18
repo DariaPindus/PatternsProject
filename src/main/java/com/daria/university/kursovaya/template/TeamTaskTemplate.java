@@ -4,24 +4,29 @@ package com.daria.university.kursovaya.template;
 import java.util.List;
 
 public abstract class TeamTaskTemplate {
-    private int duration;
-    private List<String> requirements;
+    private int mainDuration;
+    private List<String> mainRequirements;
 
-    public void doMainTask() {
-        setDuration(duration);
-        setRequirements(requirements);
+    final void doMainTask() {
+        discussPlans();
+        setMainDuration(mainDuration);
+        setMainRequirements(mainRequirements);
         executeCurrentTask();
         showResults();
     }
 
     protected abstract void showResults();
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void discussPlans(){
+        System.out.println("Team is discussing their plans");
     }
 
-    public void setRequirements(List<String> requirements) {
-        this.requirements = requirements;
+    void setMainDuration(int mainDuration) {
+        this.mainDuration = mainDuration;
+    }
+
+    public void setMainRequirements(List<String> mainRequirements) {
+        this.mainRequirements = mainRequirements;
     }
 
     public abstract void executeCurrentTask();

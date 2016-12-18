@@ -14,11 +14,11 @@ public class Designer extends TeamTaskTemplate {
         teamNames = team;
         template = new Template();
     }
-
+/*
     @Override
     public void doMainTask() {
 
-    }
+    }*/
 
     protected void showResults() {
 
@@ -34,5 +34,6 @@ public class Designer extends TeamTaskTemplate {
 
     public void createTemplate(){
         template = new Template();
+        template.setPsdTemplate("newTemplate.psd");
     }
 }

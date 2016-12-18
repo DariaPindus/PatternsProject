@@ -1,6 +1,7 @@
 package com.daria.university.kursovaya;
 
 
+import com.daria.university.kursovaya.commands.AnalyzeCommand;
 import com.daria.university.kursovaya.members.Designer;
 import com.daria.university.kursovaya.members.Manager;
 import com.daria.university.kursovaya.members.Programmers;
@@ -36,5 +37,8 @@ public class Main {
             requirements.add(str);
         }
         scanner.close();
+
+        AnalyzeCommand analyze = new AnalyzeCommand(designers, manager);
+
     }
 }

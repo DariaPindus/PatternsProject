@@ -33,5 +33,6 @@ public class Template {
 
     public void setPsdTemplate(String psdTemplate) {
         this.psdTemplate = psdTemplate;
+        System.out.println("Site template was created. Got file: " + this.psdTemplate);
     }
 }
