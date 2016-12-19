@@ -21,7 +21,8 @@ public class ExecutionCommand implements Command{
     }
 
     public void undo() {
-        designers.setTemplate(null);
 
+        programmers.clearCode();
+        programmers.clearDataBase();
     }
 }

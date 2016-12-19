@@ -7,6 +7,7 @@ public abstract class TeamTaskTemplate {
     private int mainDuration;
 
     public final void doMainTask(int dur) {
+        System.out.println("Team doing its main task");
         discussPlans();
         setMainDuration(dur);
         executeCurrentTask();
@@ -20,6 +21,7 @@ public abstract class TeamTaskTemplate {
     }
 
     void setMainDuration(int mainDuration) {
+        System.out.println("Stage duration was set: " + mainDuration);
         this.mainDuration = mainDuration;
     }
 

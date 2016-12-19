@@ -14,9 +14,9 @@ public class Programmers extends TeamTaskTemplate{
 
     private List<String> teamNames;
     //private BackEndCode code;
-    private String code;
+    private StringBuilder code;
     //private DataBase dataBase;
-    private String dataBase;
+    private StringBuilder dataBase;
     private int deadLine;
 
     public Programmers(List<String> teamNames){
@@ -24,8 +24,8 @@ public class Programmers extends TeamTaskTemplate{
     }
 
     protected void showResults() {
-        //does it make sense?
-        System.out.println(code);
+        System.out.println("Written code by programmers:" + code);
+        System.out.println("Written database: " + dataBase);
     }
 
     public void executeCurrentTask() {
@@ -34,8 +34,8 @@ public class Programmers extends TeamTaskTemplate{
 
     private void writeCode(){
         Random r = new Random();
-        for (int i = 0 ; i < r.nextInt(2)+1; i++){
-            code += StringsGenerator.stringsForCode.get(r.nextInt(10));
+        for (int i = 0 ; i < 3; i++){
+            code.append(StringsGenerator.stringsForCode.get(r.nextInt(10)) + '\n');
         }
     }
 
@@ -51,5 +51,17 @@ public class Programmers extends TeamTaskTemplate{
     //for TestingCommand
     public void test(){
         System.out.println("Programmers test their code");
+    }
+
+    public void setDeadLine(int deadLine) {
+        this.deadLine = deadLine;
+    }
+
+    public void clearCode() {
+        code.setLength(0);
+    }
+
+    public void clearDataBase() {
+        dataBase.setLength(0);
     }
 }

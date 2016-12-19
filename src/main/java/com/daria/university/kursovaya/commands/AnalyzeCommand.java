@@ -25,6 +25,6 @@ public class AnalyzeCommand implements Command{
     }
 
     public void undo() {
-
+        manager.setProjectRequirements(null);
     }
 }

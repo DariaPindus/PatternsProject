@@ -3,38 +3,32 @@ package com.daria.university.kursovaya.components;
 
 public class Template {
     private String psdTemplate;
-    private String html;
-    private String css;
-    private String js;
+    private StringBuilder code;
 
-    public String getHtml() {
-        return html;
+    public Template(){
+        code = new StringBuilder();
     }
 
-    public void setHtml(String html) {
-        this.html = html;
+    public String getCode() {
+        return code.toString();
     }
 
-    public String getCss() {
-        return css;
+    public void setCode(StringBuilder code) {
+        this.code = code;
     }
 
-    public void setCss(String css) {
-        this.css = css;
-    }
-
-    public String getJs() {
-        return js;
-    }
-
-    public void setJs(String js) {
-        this.js = js;
+    public void addCode(String input){
+        code.append(input + '\n');
     }
 
     public void setPsdTemplate(String psdTemplate) {
         this.psdTemplate = psdTemplate;
         if (psdTemplate!=null)
             System.out.println("Site template was created. Got file: " + this.psdTemplate);
+    }
+
+    public void clearCode(){
+        code.setLength(0);
     }
 
     public String getPsdTemplate() {

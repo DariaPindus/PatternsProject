@@ -13,14 +13,18 @@ public class Designers extends TeamTaskTemplate {
 
     public Designers(List<Designer> designers){
         this.designers = designers;
+        template = new Template();
     }
 
     protected void showResults() {
-
+        System.out.println("Designers show their result: " + template.getCode());
     }
 
     protected void executeCurrentTask() {
-
+        System.out.println("Designers writing front-end code." + '\n');
+        for (Designer d : designers) {
+            template.addCode(d.writePartOfTemplate());
+        }
     }
 
     public void discussConcept(){
@@ -30,10 +34,7 @@ public class Designers extends TeamTaskTemplate {
     public void createTemplate(){
         template = new Template();
         template.setPsdTemplate("newTemplate.psd");
-    }
-
-    public void setTemplate(Template t){
-        template = t;
+        System.out.println("Was set new template");
     }
 
     public void clearPsd(){
@@ -49,5 +50,14 @@ public class Designers extends TeamTaskTemplate {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
+    }
+
+    //TODO test this
+    public void clearTemplateCode(){
+        template.clearCode();
+    }
+
+    public Template getTemplate(){
+        return this.template;
     }
 }

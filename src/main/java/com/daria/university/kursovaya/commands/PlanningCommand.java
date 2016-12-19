@@ -16,10 +16,11 @@ public class PlanningCommand implements Command{
     public void execute() {
         designers.makeIdeas();
         designers.createTemplate();
-        //programmers.
+        programmers.planProject();
     }
 
     public void undo() {
-
+        designers.clearPsd();
+        programmers.setDeadLine(0);
     }
 }
