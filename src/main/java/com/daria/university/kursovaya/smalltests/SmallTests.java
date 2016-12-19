@@ -1,9 +1,7 @@
 package com.daria.university.kursovaya.smalltests;
 
 
-import com.daria.university.kursovaya.members.Designer;
-
-import java.util.concurrent.ThreadLocalRandom;
+import com.daria.university.kursovaya.decorators.Designer;
 
 public class SmallTests {
     public static void main(String[] args) {

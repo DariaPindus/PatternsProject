@@ -2,13 +2,11 @@ package com.daria.university.kursovaya;
 
 
 import com.daria.university.kursovaya.commands.AnalyzeCommand;
-import com.daria.university.kursovaya.members.Designer;
+import com.daria.university.kursovaya.decorators.Designer;
 import com.daria.university.kursovaya.members.Manager;
 import com.daria.university.kursovaya.members.Programmers;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,13 +16,13 @@ public class Main {
 
         String managerN = "Rodolfo Allison";
 
-        designersStuff.add();
+/*        designersStuff.add();
         designersStuff.add("Priscilla King");
-        programmersStuff.add("Emma Floyd");
+        programmersStuff.add("Emma Floyd");*/
         programmersStuff.add("Donald Myers");
         programmersStuff.add("Ricky Carlson");
 
-        Designer designers = new Designer(designersStuff);
+        /*Designer designers = new Designer(designersStuff);*/
         Programmers programmers = new Programmers(programmersStuff);
         Manager manager = new Manager(managerN);
 
@@ -42,7 +40,7 @@ public class Main {
 
 
 
-        AnalyzeCommand analyze = new AnalyzeCommand(designers, manager, requirements);
+       // AnalyzeCommand analyze = new AnalyzeCommand(designers, manager, requirements);
 
     }
 }

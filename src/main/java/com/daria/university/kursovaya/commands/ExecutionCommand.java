@@ -1,25 +1,27 @@
 package com.daria.university.kursovaya.commands;
 
-import com.daria.university.kursovaya.members.Designer;
+import com.daria.university.kursovaya.decorators.Designer;
+import com.daria.university.kursovaya.members.Designers;
 import com.daria.university.kursovaya.members.Programmers;
 
 import java.util.Random;
 
 public class ExecutionCommand implements Command{
-    Designer designer;
+    Designers designers;
     Programmers programmers;
 
-    public ExecutionCommand(Designer designer, Programmers programmers) {
-        this.designer = designer;
+    public ExecutionCommand(Designers designers, Programmers programmers) {
+        this.designers = designers;
         this.programmers = programmers;
     }
 
     public void execute() {
-        designer.doMainTask(new Random().nextInt(4) + 1);
-        programmers.doMainTask(new Random().nextInt(4)+2);
+        designers.doMainTask(new Random().nextInt(4) + 1);
+        programmers.doMainTask(programmers.getDeadLine());
     }
 
     public void undo() {
+        designers.setTemplate(null);
 
     }
 }

@@ -1,19 +1,21 @@
 package com.daria.university.kursovaya.commands;
 
-import com.daria.university.kursovaya.members.Designer;
+import com.daria.university.kursovaya.decorators.Designer;
+import com.daria.university.kursovaya.members.Designers;
 import com.daria.university.kursovaya.members.Programmers;
 
 public class PlanningCommand implements Command{
-    Designer designer;
+    Designers designers;
     Programmers programmers;
 
-    public PlanningCommand(Designer designer, Programmers programmers) {
-        this.designer = designer;
+    public PlanningCommand(Designers designers, Programmers programmers) {
+        this.designers = designers;
         this.programmers = programmers;
     }
 
     public void execute() {
-        designer.createTemplate();
+        designers.makeIdeas();
+        designers.createTemplate();
         //programmers.
     }
 
