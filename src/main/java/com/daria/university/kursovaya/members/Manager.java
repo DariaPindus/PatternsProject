@@ -22,6 +22,7 @@ public class Manager extends TeamTaskTemplate{
     }
 
     public void executeCurrentTask() {
+        setReport();
         System.out.println("Manager preparing requirements and doing its main job");
     }
 
@@ -37,7 +38,7 @@ public class Manager extends TeamTaskTemplate{
         return report;
     }
 
-    public void setReport(String report) {
-        this.report = report;
+    public void setReport() {
+        this.report = "We've created plan according to all clients requirements.";
     }
 }

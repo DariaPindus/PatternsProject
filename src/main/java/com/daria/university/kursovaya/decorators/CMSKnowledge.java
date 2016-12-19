@@ -15,7 +15,7 @@ public class CMSKnowledge extends SkillsDecorator {
 
     public void makeAnIdea() {
         try {
-            super.makeAnIdea();
+            designer.makeAnIdea();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
