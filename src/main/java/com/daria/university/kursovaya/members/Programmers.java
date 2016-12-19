@@ -21,6 +21,8 @@ public class Programmers extends TeamTaskTemplate{
 
     public Programmers(List<String> teamNames){
         this.teamNames = teamNames;
+        code = new StringBuilder();
+        dataBase = new StringBuilder();
     }
 
     protected void showResults() {
@@ -48,11 +50,14 @@ public class Programmers extends TeamTaskTemplate{
         return deadLine;
     }
 
-    //for TestingCommand
+    //TODO do it boolean
     public void test(){
         System.out.println("Programmers test their code");
     }
 
+    public boolean testPassed(){
+        return new Random().nextBoolean();
+    }
     public void setDeadLine(int deadLine) {
         this.deadLine = deadLine;
     }

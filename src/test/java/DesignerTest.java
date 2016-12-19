@@ -35,9 +35,6 @@ public class DesignerTest {
     public void testClearTemplateCode(){
         fillList();
 
-        StringBuilder sb = new StringBuilder();
-        sb.append("alalalala");
-
         des.doMainTask(2);
         Assert.assertNotNull(des.getTemplate());
 
