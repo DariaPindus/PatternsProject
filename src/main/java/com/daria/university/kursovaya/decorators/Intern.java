@@ -3,8 +3,8 @@ package com.daria.university.kursovaya.decorators;
 
 public class Intern extends Designer{
 
-    public Intern(String name) {
-        this.name = "Intern " + name;
+    public Intern(String n) {
+        super(n);
     }
 
     public String writePartOfTemplate() {
@@ -12,6 +12,6 @@ public class Intern extends Designer{
     }
 
     public void makeAnIdea() {
-        this.idea = "Simple idea by intern, knowing basic concepts.";
+        super.setIdea("Simple idea by intern, knowing basic concepts.");
     }
 }

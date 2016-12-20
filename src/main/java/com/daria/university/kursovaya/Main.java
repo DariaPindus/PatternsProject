@@ -29,6 +29,7 @@ public class Main {
 
         /*Designer designers = new Designer(designersStuff);*/
         Designers designers = new Designers(fillDesigners());
+        System.out.println(designers.toString());
         Programmers programmers = new Programmers(programmersStuff);
         Manager manager = new Manager(managerN);
 

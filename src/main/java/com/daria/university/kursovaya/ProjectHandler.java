@@ -43,6 +43,7 @@ public class ProjectHandler {
             stages.get(i).undo();
             executeStage(i);
         }
+
         return true;
     }
 }

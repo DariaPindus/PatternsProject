@@ -6,6 +6,7 @@ public class RawTechnologiesKnowledge extends SkillsDecorator{
     Designer designer;
 
     public RawTechnologiesKnowledge(Designer designer) {
+        super(designer.getName());
         this.designer = designer;
     }
 
@@ -15,7 +16,7 @@ public class RawTechnologiesKnowledge extends SkillsDecorator{
 
     public void makeAnIdea() {
         try {
-            super.makeAnIdea();
+            designer.makeAnIdea();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }

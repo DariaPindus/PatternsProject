@@ -6,6 +6,7 @@ public class CMSKnowledge extends SkillsDecorator {
     private Designer designer;
 
     public CMSKnowledge(Designer designer) {
+        super(designer.getName());
         this.designer = designer;
     }
 

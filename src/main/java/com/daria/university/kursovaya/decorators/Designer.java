@@ -11,6 +11,10 @@ public abstract class Designer {
     protected String idea = "Unknown idea";
     protected String partOfCode;
 
+    public Designer(String name){
+        this.name = name;
+    }
+
     //TODO check if this is correct
     public abstract String writePartOfTemplate(); //throws IllegalAccessException { throw new IllegalAccessException("Concrete class is needed");}
 
@@ -21,4 +25,8 @@ public abstract class Designer {
     }
 
     public String getName() { return  name;}
+
+    public void setIdea(String idea) {
+        this.idea = idea;
+    }
 }

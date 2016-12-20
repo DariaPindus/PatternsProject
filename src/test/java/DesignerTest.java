@@ -1,7 +1,5 @@
 import com.daria.university.kursovaya.components.Template;
-import com.daria.university.kursovaya.decorators.Designer;
-import com.daria.university.kursovaya.decorators.EmployedDesigner;
-import com.daria.university.kursovaya.decorators.Intern;
+import com.daria.university.kursovaya.decorators.*;
 import com.daria.university.kursovaya.members.Designers;
 import org.junit.Assert;
 import org.junit.Test;
@@ -27,7 +25,7 @@ public class DesignerTest {
             Assert.assertEquals(intern.getIdea(), str1);
             Assert.assertEquals(empl.getIdea(), str2);
         } catch (IllegalAccessException e){
-
+            Assert.fail("Exception " + IllegalAccessException.class.getSimpleName() + " was caught");
         }
     }
 
@@ -50,7 +48,21 @@ public class DesignerTest {
     }
 
     @Test
-    public void makingIdeaTest(){
+    public void makingIdeaTest() throws IllegalAccessException {
+        intern = new CMSKnowledge(intern);
+        empl = new CMSKnowledge(empl);
+        empl = new RawTechnologiesKnowledge(empl);
+        intern.makeAnIdea();
+        Assert.assertNotEquals(intern.getIdea(), "Concrete class is needed");
+        Assert.assertNotEquals(empl.getIdea(), "Concrete class is needed");
+    }
 
+    @Test
+    public void testDecoratedNames(){
+        intern = new CMSKnowledge(intern);
+        empl = new CMSKnowledge(empl);
+        empl = new RawTechnologiesKnowledge(empl);
+        Assert.assertNotEquals(intern.getName(), "Initial name");
+        Assert.assertNotEquals(empl.getName(), "Initial name");
     }
 }

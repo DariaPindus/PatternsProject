@@ -4,7 +4,7 @@ package com.daria.university.kursovaya.decorators;
 public class EmployedDesigner extends Designer{
 
     public EmployedDesigner(String n) {
-        name = "Employee " + n;
+        super(n);
     }
 
     public String writePartOfTemplate() {
@@ -12,9 +12,10 @@ public class EmployedDesigner extends Designer{
     }
 
     public void makeAnIdea() {
-        this.idea = "Significant idea by employed designer with experience in this stuff";
+        super.setIdea("Significant idea by employed designer with experience in this stuff");
     }
 /*
+
     public String createPsdTemplate(){
         System.out.println("Empleyed designer creating psd template");
         return "psdTemplate.psd";
