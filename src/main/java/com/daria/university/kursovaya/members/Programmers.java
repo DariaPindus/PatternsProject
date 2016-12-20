@@ -1,14 +1,9 @@
 package com.daria.university.kursovaya.members;
 
 
-import com.daria.university.kursovaya.components.BackEndCode;
-import com.daria.university.kursovaya.components.DataBase;
 import com.daria.university.kursovaya.service.StringsGenerator;
 import com.daria.university.kursovaya.template.TeamTaskTemplate;
-import org.junit.Assert;
-import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 

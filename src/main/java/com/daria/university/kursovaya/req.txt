@@ -1,4 +1,0 @@
-Des: Simple flat template
-Des: Bright colors
-Des: Thumbnails hovering
-Des: Adoptive design
