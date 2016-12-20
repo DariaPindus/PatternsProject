@@ -20,7 +20,8 @@ public class PlanningCommand implements Command{
     }
 
     public void undo() {
+        System.out.println("\nUndoing planning");
         designers.clearPsd();
-        programmers.setDeadLine(0);
+        programmers.setDeadLine(-1);
     }
 }

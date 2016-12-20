@@ -17,6 +17,7 @@ public class TestingCommand implements Command{
 
     public void undo() {
         //TODO should there be smth more??
+        System.out.println("\nUndoing testing");
         result = false;
     }
 

@@ -2,6 +2,7 @@ package com.daria.university.kursovaya.members;
 
 
 import com.daria.university.kursovaya.template.TeamTaskTemplate;
+import org.junit.AfterClass;
 
 import java.util.List;
 import java.util.Map;
@@ -26,10 +27,6 @@ public class Manager extends TeamTaskTemplate{
         System.out.println("Manager preparing requirements and doing its main job");
     }
 
-//    public Map<String, String> getRequirements() {
-//        return requirements;
-//    }
-
     public void setProjectRequirements(List<String> requirements) {
         this.requirements = requirements;
     }
@@ -40,5 +37,13 @@ public class Manager extends TeamTaskTemplate{
 
     public void setReport() {
         this.report = "We've created plan according to all clients requirements.";
+    }
+
+    public void clearReport(){
+        this.report = null;
+    }
+
+    public List<String> getRequirements() {
+        return requirements;
     }
 }

@@ -11,7 +11,7 @@ public class RawTechnologiesKnowledge extends SkillsDecorator{
     }
 
     public String writePartOfTemplate() {
-        return designer.writePartOfTemplate() + "some php/angular/jquery code";
+        return designer.writePartOfTemplate() + ", some php/angular/jquery code";
     }
 
     public void makeAnIdea() {

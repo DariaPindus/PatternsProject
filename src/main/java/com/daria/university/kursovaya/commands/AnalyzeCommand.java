@@ -25,6 +25,8 @@ public class AnalyzeCommand implements Command{
     }
 
     public void undo() {
+        System.out.println("\nUndoing analyzing");
         manager.setProjectRequirements(null);
+        manager.clearReport();
     }
 }

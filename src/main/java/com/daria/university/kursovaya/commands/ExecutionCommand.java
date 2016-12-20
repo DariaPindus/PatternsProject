@@ -21,6 +21,8 @@ public class ExecutionCommand implements Command{
     }
 
     public void undo() {
+        System.out.println("\nUndoing execution stage");
+        designers.clearCode();
         programmers.clearCode();
         programmers.clearDataBase();
     }

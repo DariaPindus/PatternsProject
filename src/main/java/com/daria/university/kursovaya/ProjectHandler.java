@@ -18,16 +18,7 @@ public class ProjectHandler {
     }
 
     public void executeProject(){
-        Scanner sc = new Scanner(System.in);/*
-        for (Command c : stages) {
-            c.execute();
-            System.out.println("Command " + c.getClass().getSimpleName() + " was executed.\n " +
-                    "Are you satisfied with result? (y/n)");
-            String ans = sc.nextLine();
-            if (ans.equals("y"))
-                continue;
-            else if (ans.equals("n"))
-                c.undo();c.execute();*/
+        Scanner sc = new Scanner(System.in);
         for (int i = 0; i < stages.size(); i++){
             executeStage(i);
         }
@@ -43,7 +34,6 @@ public class ProjectHandler {
             stages.get(i).undo();
             executeStage(i);
         }
-
         return true;
     }
 }

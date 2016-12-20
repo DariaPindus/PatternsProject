@@ -5,6 +5,8 @@ import com.daria.university.kursovaya.components.BackEndCode;
 import com.daria.university.kursovaya.components.DataBase;
 import com.daria.university.kursovaya.service.StringsGenerator;
 import com.daria.university.kursovaya.template.TeamTaskTemplate;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,11 +15,11 @@ import java.util.Random;
 public class Programmers extends TeamTaskTemplate{
 
     private List<String> teamNames;
-    //private BackEndCode code;
     private StringBuilder code;
-    //private DataBase dataBase;
     private StringBuilder dataBase;
-    private int deadLine;
+    private int deadLine = -1;
+
+    public Programmers(){}
 
     public Programmers(List<String> teamNames){
         this.teamNames = teamNames;
@@ -26,24 +28,32 @@ public class Programmers extends TeamTaskTemplate{
     }
 
     protected void showResults() {
-        System.out.println("Written code by programmers:" + code);
-        System.out.println("Written database: " + dataBase);
+        System.out.println("Written code by programmers:" + getCode());
+        System.out.println("Written database: " + getDataBase());
     }
 
     public void executeCurrentTask() {
+        writeDataBase();
         writeCode();
     }
 
     private void writeCode(){
         Random r = new Random();
         for (int i = 0 ; i < 3; i++){
-            code.append(StringsGenerator.stringsForCode.get(r.nextInt(10)) + '\n');
+            code.append(StringsGenerator.stringsForCode.get(r.nextInt(9)) + '\n');
+        }
+    }
+
+    private void writeDataBase(){
+        Random r = new Random();
+        for (int i = 0 ; i < 3; i++){
+            dataBase.append(StringsGenerator.stringsForDB.get(r.nextInt(8)) + '\n');
         }
     }
 
     public void planProject(){
         deadLine = new Random().nextInt(4) + 1;
-        System.out.println("Planning project by programmers with setting deadLine for execution stage");
+        System.out.println("Planning project by programmers with setting deadLine: " + deadLine + " for execution stage");
     }
 
     public int getDeadLine(){
@@ -58,6 +68,7 @@ public class Programmers extends TeamTaskTemplate{
     public boolean testPassed(){
         return new Random().nextBoolean();
     }
+
     public void setDeadLine(int deadLine) {
         this.deadLine = deadLine;
     }
@@ -69,4 +80,14 @@ public class Programmers extends TeamTaskTemplate{
     public void clearDataBase() {
         dataBase.setLength(0);
     }
+
+    public String getCode() {
+        return code.toString();
+    }
+
+    public String getDataBase() {
+        return dataBase.toString();
+    }
+
+
 }

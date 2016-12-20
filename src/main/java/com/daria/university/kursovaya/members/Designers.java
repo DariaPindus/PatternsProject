@@ -53,7 +53,7 @@ public class Designers extends TeamTaskTemplate {
     }
 
     //TODO test this
-    public void clearTemplateCode(){
+    public void clearCode(){
         template.clearCode();
     }
 

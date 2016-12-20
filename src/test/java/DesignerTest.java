@@ -36,7 +36,7 @@ public class DesignerTest {
         des.doMainTask(2);
         Assert.assertNotNull(des.getTemplate());
 
-        des.clearTemplateCode();
+        des.clearCode();
         Assert.assertEquals(des.getTemplate().getCode().length(), 0);
 
     }

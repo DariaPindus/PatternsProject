@@ -17,8 +17,6 @@ public class Main {
     public static void main(String[] args) {
         ProjectHandler projectHandler = new ProjectHandler();
 
-        //TODO add list of stuff
-        //ArrayList<Designer> designersStuff = new ArrayList<Designer>();
         ArrayList<String> programmersStuff = new ArrayList<String>();
 
         String managerN = "Rodolfo Allison";
@@ -29,7 +27,6 @@ public class Main {
 
         /*Designer designers = new Designer(designersStuff);*/
         Designers designers = new Designers(fillDesigners());
-        System.out.println(designers.toString());
         Programmers programmers = new Programmers(programmersStuff);
         Manager manager = new Manager(managerN);
 
@@ -37,16 +34,6 @@ public class Main {
         requirements.add("First dumb req");
         requirements.add("Seconf req");
         requirements.add("Third req");
-/*
-        System.out.println("Please, enter your project requirements: ");
-        Scanner scanner = new Scanner(System.in);
-        String str = "";
-        while (!str.equals("end")){
-            str = scanner.nextLine();
-            requirements.add(str);
-        }
-        scanner.close();
-*/
 
         AnalyzeCommand analyze = new AnalyzeCommand(designers, manager, requirements);
         PlanningCommand planning = new PlanningCommand(designers, programmers);
@@ -61,7 +48,7 @@ public class Main {
         projectHandler.executeProject();
     }
 
-    private static List<Designer> fillDesigners(){
+    public static List<Designer> fillDesigners(){
         List<Designer> des = new ArrayList<Designer>();
         Designer intern = new Intern("Conrad Smith");
         Designer empl = new EmployedDesigner("Jeremy Bayrons");

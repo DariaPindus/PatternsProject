@@ -7,7 +7,7 @@ public abstract class TeamTaskTemplate {
     private int mainDuration;
 
     public final void doMainTask(int dur) {
-        System.out.println("Team doing its main task");
+        System.out.println("Team " + this.getClass().getSimpleName() + " doing its main task");
         discussPlans();
         setMainDuration(dur);
         executeCurrentTask();

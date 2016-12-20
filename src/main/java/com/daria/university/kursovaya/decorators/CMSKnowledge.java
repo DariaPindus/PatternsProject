@@ -11,7 +11,7 @@ public class CMSKnowledge extends SkillsDecorator {
     }
 
     public String writePartOfTemplate() {
-        return designer.writePartOfTemplate() + " adding basic CMS Wordpress markup";
+        return designer.writePartOfTemplate() + ", adding basic CMS Wordpress markup";
     }
 
     public void makeAnIdea() {
