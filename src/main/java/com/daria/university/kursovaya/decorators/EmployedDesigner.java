@@ -14,6 +14,10 @@ public class EmployedDesigner extends Designer{
     public void makeAnIdea() {
         super.setIdea("Significant idea by employed designer with experience in this stuff");
     }
+
+    public String getIdea() {
+        return super.idea;
+    }
 /*
 
     public String createPsdTemplate(){

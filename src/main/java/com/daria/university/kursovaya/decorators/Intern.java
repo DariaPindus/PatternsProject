@@ -14,4 +14,8 @@ public class Intern extends Designer{
     public void makeAnIdea() {
         super.setIdea("Simple idea by intern, knowing basic concepts.");
     }
+
+    public String getIdea(){
+        return idea;
+    }
 }

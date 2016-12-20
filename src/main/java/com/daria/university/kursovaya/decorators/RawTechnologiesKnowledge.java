@@ -21,4 +21,8 @@ public class RawTechnologiesKnowledge extends SkillsDecorator{
             e.printStackTrace();
         }
     }
+
+    public String getIdea() {
+        return designer.getIdea();
+    }
 }

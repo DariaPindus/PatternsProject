@@ -8,7 +8,7 @@ import java.util.List;
 public abstract class Designer {
 
     protected String name = "Initial name";
-    protected String idea = "Unknown idea";
+    protected String idea;
     protected String partOfCode;
 
     public Designer(String name){
@@ -20,13 +20,11 @@ public abstract class Designer {
 
     public void makeAnIdea() throws IllegalAccessException { throw new IllegalAccessException("Concrete class is needed");}
 
-    public String getIdea(){
-        return idea;
-    }
+    public abstract String getIdea();
 
     public String getName() { return  name;}
 
-    public void setIdea(String idea) {
-        this.idea = idea;
+    public void setIdea(String i) {
+        this.idea = i;
     }
 }

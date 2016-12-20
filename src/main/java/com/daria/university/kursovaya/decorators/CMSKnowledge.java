@@ -21,4 +21,8 @@ public class CMSKnowledge extends SkillsDecorator {
             e.printStackTrace();
         }
     }
+
+    public String getIdea(){
+        return designer.idea;
+    }
 }
