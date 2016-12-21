@@ -2,7 +2,6 @@ package com.daria.university.kursovaya.decorators;
 
 
 public class Intern extends Designer{
-
     public Intern(String n) {
         super(n);
     }

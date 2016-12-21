@@ -17,11 +17,13 @@ public class PlanningCommand implements Command{
         designers.makeIdeas();
         designers.createTemplate();
         programmers.planProject();
+        System.out.println("====================\n");
     }
 
     public void undo() {
         System.out.println("\nUndoing planning");
         designers.clearPsd();
         programmers.setDeadLine(-1);
+        System.out.println("====================\n");
     }
 }

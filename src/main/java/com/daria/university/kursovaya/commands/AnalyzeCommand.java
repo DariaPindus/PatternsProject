@@ -22,11 +22,13 @@ public class AnalyzeCommand implements Command{
         manager.setProjectRequirements(requirements);
         manager.doMainTask(new Random().nextInt(2)+1);
         designers.discussConcept();
+        System.out.println("====================\n");
     }
 
     public void undo() {
         System.out.println("\nUndoing analyzing");
         manager.setProjectRequirements(null);
         manager.clearReport();
+        System.out.println("====================\n");
     }
 }

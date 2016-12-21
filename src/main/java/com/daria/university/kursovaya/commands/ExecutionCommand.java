@@ -18,6 +18,7 @@ public class ExecutionCommand implements Command{
     public void execute() {
         designers.doMainTask(new Random().nextInt(4) + 1);
         programmers.doMainTask(programmers.getDeadLine());
+        System.out.println("====================\n");
     }
 
     public void undo() {
@@ -25,5 +26,6 @@ public class ExecutionCommand implements Command{
         designers.clearCode();
         programmers.clearCode();
         programmers.clearDataBase();
+        System.out.println("====================\n");
     }
 }

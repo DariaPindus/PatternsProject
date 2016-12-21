@@ -13,12 +13,13 @@ public class TestingCommand implements Command{
     public void execute() {
         result = programmers.testPassed();
         System.out.println("Programmers test passed successfully: " + result);
+        System.out.println("====================\n");
     }
 
     public void undo() {
-        //TODO should there be smth more??
         System.out.println("\nUndoing testing");
         result = false;
+        System.out.println("====================\n");
     }
 
     public boolean getResult(){
